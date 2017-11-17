@@ -102,11 +102,12 @@ void setup() {
   display.print("Connecting to AIO");
   display.display();
   io.connect();
+  
   counter->onMessage(handleMessage);
   // wait for a connection
   while(io.status() < AIO_CONNECTED) {
-    Serial.print(".");
-    delay(500);
+    Serial.print(io.status());
+    delay(100);
   }
 
   // we are connected
