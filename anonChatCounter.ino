@@ -69,7 +69,7 @@ Adafruit_SSD1306 display = Adafruit_SSD1306();
 AdafruitIO_Feed *counter = io.feed("anonchatcounter");
 
 void setup() {  
-  Serial.begin(9600);
+  Serial.begin(115200);
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   Serial.println("OLED FeatherWing test");
   Serial.println("OLED begun");
@@ -89,14 +89,14 @@ void setup() {
   while(! Serial);
 
     /************************* INITIALIZE WIFI */
- Serial.println("Connecting to Wifi");
+ /*Serial.println("Connecting to Wifi");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
   Serial.println("WiFi connected");  
   Serial.println("IP address: ");  Serial.println(WiFi.localIP());
-
+*/
   // connect to io.adafruit.com
   Serial.print("Connecting to Adafruit IO");
   display.print("Connecting to AIO");
